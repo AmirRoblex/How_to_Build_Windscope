@@ -1,0 +1,78 @@
+/* Inter Google Font is loaded via <link> in the HTML */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* A slightly cooler gray than bg-gray-50 */
+}
+
+/* Active tab style for the sidebar navigation */
+.tab-active {
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    font-weight: 600;
+}
+
+/* Inactive tab style for the sidebar navigation */
+.tab-inactive {
+    background-color: transparent;
+    color: #4b5563; /* gray-600 */
+}
+
+/* Hover effect for inactive tabs */
+.tab-inactive:hover {
+    background-color: #e5e7eb; /* gray-200 */
+}
+
+/* Base state for all tab content panes - hidden by default */
+.tab-content {
+    display: none;
+}
+
+/* Active state for tab content pane - visible */
+.tab-content-active {
+    display: block;
+}
+
+/* Simple animation for content fade-in */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Apply the animation to the active content pane */
+.tab-content-active {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Custom icon styling for the LEGO-like icons in the nav */
+.icon-lego {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0; /* Prevents icon from shrinking if text wraps */
+}
+
+/* Styling for the FAQ/Troubleshooting accordion */
+details > summary {
+    list-style: none; /* Hide the default triangle */
+}
+details > summary::-webkit-details-marker {
+    display: none; /* Hide the default triangle in Safari */
+}
+details > summary::after {
+    content: '+';
+    float: right;
+    font-size: 1.5em;
+    line-height: 1;
+    font-weight: 300;
+    transition: transform 0.2s ease-in-out;
+}
+details[open] > summary::after {
+    transform: rotate(45deg);
+}
