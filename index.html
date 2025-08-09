@@ -12,7 +12,8 @@
     <div class="container mx-auto p-4 md:p-8">
         
         <header class="text-center mb-8 md:mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold text-blue-600">🌬️ Windscope</h1>
+            <!-- Logo implementation -->
+            <img src="logo1.png" alt="Windscope Logo: Build Your Own Wind Park Simulator!" class="mx-auto w-48 md:w-64 lg:w-80 h-auto mb-4 animate-fade-in-up" onerror="this.onerror=null;this.src='https://placehold.co/256x96/e2e8f0/64748b?text=Windscope+Logo';">
             <p class="text-lg md:text-xl text-gray-600 mt-2">Build Your Own Interactive Wind Park Simulator!</p>
         </header>
 
@@ -24,13 +25,13 @@
                         <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-11h2v6h-2v-6zm0-3h2v2h-2V6z"/></svg>
                         <span>Welcome!</span>
                     </button>
-                    <button onclick="changeTab('hardware')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
-                        <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1zm0 2v3h14V6H5zm0 5v3h14v-3H5z"/></svg>
-                        <span>What You'll Need</span>
-                    </button>
                     <button onclick="changeTab('assembly')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
                         <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.707 6.293l-4-4A1 1 0 0017 2H7a1 1 0 00-1 1v18a1 1 0 001 1h10a1 1 0 001-1V9a1 1 0 00-.293-.707zM16 4.414L19.586 8H16V4.414zM16 14h-4v4h-2v-4H6v-2h4V8h2v4h4v2z"/></svg>
                         <span>Assembly Guide</span>
+                    </button>
+                    <button onclick="changeTab('hardware')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
+                        <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1zm0 2v3h14V6H5zm0 5v3h14v-3H5z"/></svg>
+                        <span>What You'll Need</span>
                     </button>
                     <button onclick="changeTab('software')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
                         <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 100-6 3 3 0 000 6zm0-8a5 5 0 110 10 5 5 0 010-10zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z"/></svg>
@@ -56,10 +57,6 @@
                         <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h18v2H3v-2zm0 4h18v2H3v-2z"/></svg>
                         <span>Lesson Plan</span>
                     </button>
-                    <button onclick="changeTab('community')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
-                        <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0zM6 12a2 2 0 11-4 0 2 2 0 014 0zm12 6a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4z"/></svg>
-                        <span>Community</span>
-                    </button>
                     <button onclick="changeTab('faq')" class="tab-btn tab-inactive flex items-center gap-3 w-full text-left p-3 rounded-lg transition-colors" type="button">
                         <svg class="icon-lego" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22a10 10 0 110-20 10 10 0 010 20zm-1-7a1 1 0 102 0v-2a1 1 0 10-2 0v2zm0-4a1 1 0 102 0V9a1 1 0 10-2 0v2z"/></svg>
                         <span>Troubleshooting</span>
@@ -73,20 +70,20 @@
                 <!-- Welcome Tab -->
                 <div id="welcome" class="tab-content tab-content-active">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Welcome, Future Engineers! 🌍✨</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Welcome, Future Engineers!</h2>
                         <p class="mb-4 text-lg">Have you ever looked at a giant wind turbine and wondered how it works? Or how a whole field of them—a wind park—is planned? The switch to renewable energy is one of the most important challenges of our time, and wind power is a huge part of the solution.</p>
                         <p class="mb-6 text-lg">With <strong>Windscope</strong>, you get to be the planner! You'll build your own interactive model of a wind park. Using special blocks, you'll design a landscape, place wind turbines, and see a real-time simulation of your park's energy output. You can even control the wind with physical knobs!</p>
                         <div class="text-center mb-6">
-                            <img src="https://i.imgur.com/8a5XyIm.png" alt="The completed Windscope exhibit with a person interacting with it." class="rounded-lg shadow-xl mx-auto max-w-full md:max-w-2xl" onerror="this.onerror=null;this.src='https://placehold.co/800x500/e2e8f0/64748b?text=Windscope+Exhibit';">
+                            <img src="pics/complete_windscope.jpg" alt="The completed Windscope exhibit with a person interacting with it." class="rounded-lg shadow-xl mx-auto max-w-full md:max-w-2xl" onerror="this.onerror=null;this.src='https://placehold.co/800x500/e2e8f0/64748b?text=Windscope+Exhibit';">
                             <p class="text-sm text-gray-500 mt-2">The finished Windscope exhibit in action. (Photo: Maximilian Reiner)</p>
                         </div>
                         <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
                             <h3 class="font-bold text-xl text-blue-800 mb-3">What You Will Learn:</h3>
                             <ul class="list-none space-y-3">
-                                <li class="flex items-start"><span class="text-2xl mr-3">💨</span><div><strong>Physics:</strong> Understand how wind speed and direction affect energy generation and create a "wind shadow" or wake effect.</div></li>
-                                <li class="flex items-start"><span class="text-2xl mr-3">🔧</span><div><strong>Engineering:</strong> Learn about the physical structure and assembly of an interactive exhibit, from the wooden frame to the electronic components.</div></li>
-                                <li class="flex items-start"><span class="text-2xl mr-3">💡</span><div><strong>Renewable Energy:</strong> Discover the real-world challenges of wind park planning, like turbine placement, distance rules, and maximizing efficiency.</div></li>
-                                <li class="flex items-start"><span class="text-2xl mr-3">🖥️</span><div><strong>Computer Science:</strong> Get a peek into how a camera, a computer, and a projector work together to create a seamless, real-time simulation.</div></li>
+                                <li class="flex items-start"><span class="text-2xl mr-3 icon-bullet"></span><div><strong>Physics:</strong> Understand how wind speed and direction affect energy generation and create a "wind shadow" or wake effect.</div></li>
+                                <li class="flex items-start"><span class="text-2xl mr-3 icon-bullet"></span><div><strong>Engineering:</strong> Learn about the physical structure and assembly of an interactive exhibit, from the wooden frame to the electronic components.</div></li>
+                                <li class="flex items-start"><span class="text-2xl mr-3 icon-bullet"></span><div><strong>Renewable Energy:</strong> Discover the real-world challenges of wind park planning, like turbine placement, distance rules, and maximizing efficiency.</div></li>
+                                <li class="flex items-start"><span class="text-2xl mr-3 icon-bullet"></span><div><strong>Computer Science:</strong> Get a peek into how a camera, a computer, and a projector work together to create a seamless, real-time simulation.</div></li>
                             </ul>
                         </div>
                     </div>
@@ -95,33 +92,31 @@
                 <!-- Hardware Tab -->
                 <div id="hardware" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🛒 What You'll Need: The Complete Shopping List</h2>
-                        <p class="mb-6">Here is a detailed list of all the parts for your Windscope project. We've included descriptions, example models from the original project, and links to where you might buy them in Germany.</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">What You'll Need: Electronic Equipment & More</h2>
+                        <p class="mb-6">Here is a detailed list of all the parts required for your Windscope project. This includes specifications and recommended models.</p>
                         
-                        <h3 class="text-2xl font-bold text-blue-700 border-b-2 border-blue-200 pb-2 mb-4">🧠 The Electronic Brains</h3>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Mini-PC</h4><p class="text-sm mb-2">The computer that runs the entire simulation. Needs to be powerful enough for the simulation and video processing.</p><p class="text-sm mb-2"><strong>Example:</strong> Intel NUC10i7FNH (16GB RAM, 256GB SSD)</p><a href="https://www.amazon.de/s?k=intel+nuc" target="_blank" class="text-blue-600 hover:underline text-sm font-semibold">Shop on Amazon.de &rarr;</a></div>
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Web Camera (Scanner)</h4><p class="text-sm mb-2">Points up to scan the unique patterns on the bottom of the blocks. A wide-angle lens is crucial to see the whole grid!</p><p class="text-sm mb-2"><strong>Required:</strong> ELP USB3MP01H with 2.9mm wide-angle lens</p><a href="https://www.amazon.de/s?k=elp+usb+camera+wide+angle" target="_blank" class="text-blue-600 hover:underline text-sm font-semibold">Shop on Amazon.de &rarr;</a></div>
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Projector</h4><p class="text-sm mb-2">Projects the simulation visuals down onto the blocks. Any standard projector with good brightness will work.</p><p class="text-sm mb-2"><strong>Example:</strong> Panasonic PT-EZ590</p><a href="https://www.conrad.de/de/o/beamer-0213010.html" target="_blank" class="text-blue-600 hover:underline text-sm font-semibold">Shop on Conrad.de &rarr;</a></div>
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Display Screen (Dashboard)</h4><p class="text-sm mb-2">Shows the dashboard with real-time data. A touch screen is great for interactivity!</p><p class="text-sm mb-2"><strong>Example:</strong> iiyama ProLite TF1634MC-B8X (15.6")</p><a href="https://www.amazon.de/s?k=iiyama+touchscreen+15.6" target="_blank" class="text-blue-600 hover:underline text-sm font-semibold">Shop on Amazon.de &rarr;</a></div>
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Wind Controls</h4><p class="text-sm mb-2">Physical knobs to control wind speed and direction, powered by a microcontroller.</p><ul class="text-sm list-disc list-inside mb-2"><li>Arduino Uno or Nano</li><li>2x Rotary Potentiometers (10kΩ)</li><li>Jumper Wires & Breadboard</li></ul><a href="https://www.reichelt.de/arduino-starter-kit-de-ard-starterkit-de-p217698.html" target="_blank" class="text-blue-600 hover:underline text-sm font-semibold">Shop on Reichelt.de &rarr;</a></div>
-                        </div>
-
-                        <h3 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4 mt-8">🛠️ The Table & Tools</h3>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Building Materials</h4><p class="text-sm mb-2">To build the main box (approx. 120x120x85cm) and projector arm.</p><ul class="text-sm list-disc list-inside mb-2"><li>Plywood sheets</li><li>Wood screws & glue</li><li>Plexiglass (Acrylglas) Sheet (~56x56cm)</li></ul><a href="https://www.bauhaus.info/sperrholzplatten/c/10000705" target="_blank" class="text-green-600 hover:underline text-sm font-semibold">Shop at Bauhaus &rarr;</a></div>
-                            <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Tools</h4><p class="text-sm mb-2">Basic tools for assembly.</p><ul class="text-sm list-disc list-inside mb-2"><li>Power drill / Screwdriver</li><li>Saw (if cutting wood yourself)</li><li>Measuring tape</li><li>Safety glasses</li></ul></div>
-                        </div>
-
-                        <h3 class="text-2xl font-bold text-yellow-700 border-b-2 border-yellow-200 pb-2 mb-4 mt-8">🧱 The Interactive Blocks</h3>
-                        <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
-                            <h4 class="font-bold text-lg">LEGO® or Compatible Bricks</h4>
-                            <p class="text-sm mb-2">You need to build 256 (a 16x16 grid) special blocks. Each has a 4x4 plate base with a unique scannable pattern on the bottom and a colored 1x1 tile on top. This is the magic of the exhibit!</p>
-                            <div class="my-4 p-4 bg-white rounded-lg border">
-                                <img src="https://i.imgur.com/Tqg8q7E.png" alt="Diagram of the six different block types" class="mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x200/fffbeb/b45309?text=6+Block+Types';">
-                                <p class="text-center text-sm text-gray-500 mt-2">The six block types and their unique scannable patterns.</p>
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-blue-700 border-b-2 border-blue-200 pb-2 mb-4">4. Electronic Equipment Overview</h3>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Mini PC Specs</h4><ul class="list-disc list-inside text-sm mb-2"><li>Intel NUC10i7FNH</li><li>2 × 8GB DDR4-2400 SO-DIMM</li><li>256GB M.2 PCIe Gen 3 NVMe SSD</li></ul></div>
+                                    <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Webcams</h4><ul class="list-disc list-inside text-sm mb-2"><li><strong>Bottom scanner:</strong> ELP USB3MP01H (2.9mm wide-angle lens)</li><li><strong>Top viewer:</strong> ELP USBFHD01M (2.8–12mm zoom lens)</li></ul></div>
+                                    <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Touchscreen</h4><ul class="list-disc list-inside text-sm mb-2"><li>iiyama ProLite TF1634MC-B8X</li><li>15.6", FHD, 10-point capacitive touch, IPS panel</li></ul></div>
+                                    <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Projectors</h4><ul class="list-disc list-inside text-sm mb-2"><li><strong>LEGO view:</strong> Panasonic PT-EZ590</li><li><strong>Wall view:</strong> Panasonic PT-RZ970</li></ul></div>
+                                    <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow"><h4 class="font-bold text-lg">Peripherals</h4><ul class="list-disc list-inside text-sm mb-2"><li>Anker PowerExpand USB-C to Dual HDMI Adapter</li><li>3m USB 3.0 extension cable</li><li>5m HDMI cable</li><li>5m power cord (IEC-60320 C13)</li><li>3-way electrical junction box</li></ul></div>
+                                </div>
                             </div>
-                            <a href="https://www.lego.com/de-de/pick-a-brick" target="_blank" class="text-yellow-800 hover:underline text-sm font-semibold">Shop on LEGO Pick a Brick &rarr;</a>
+
+                            <div>
+                                <h3 class="text-2xl font-bold text-green-700 border-b-2 border-green-200 pb-2 mb-4 mt-8">5. Lighting System</h3>
+                                <div class="border p-4 rounded-lg bg-gray-50 hover:shadow-md transition-shadow">
+                                    <ul class="list-disc list-inside text-sm mb-2">
+                                        <li><strong>LED strip:</strong> Häfele Loox5 LED 2063, 12V, 4000K, 60 LEDs/m</li>
+                                        <li><strong>Power supply:</strong> Häfele Loox5 Netzteil 100–240V / 12V / 40W / PFC</li>
+                                        <li><strong>Splitter:</strong> Häfele Connect 6-fach Verteiler 12V / 60W</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,41 +124,31 @@
                 <!-- Assembly Tab -->
                 <div id="assembly" class="tab-content">
                      <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🏗️ Assembling Your Windscope</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Assembling Your Windscope</h2>
                         
                         <div class="space-y-8">
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl">1️⃣</span> Build the Interactive Table</h3>
-                                <p class="mb-4">Construct a sturdy box frame from your wood. This will house the electronics safely and provide a stable platform for the interactive grid.</p>
-                                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 p-4 rounded-lg border">
-                                    <div class="md:w-1/2">
-                                        <ul class="list-disc list-inside space-y-2 mb-4">
-                                            <li><strong>Main Box:</strong> Assemble a box with approximate outer dimensions of <strong>120cm x 120cm x 85cm</strong>.</li>
-                                            <li><strong>Plexiglass Ledge:</strong> Inside the top, create a ledge for the 56x56cm plexiglass sheet to sit on. A CNC-milled grid on the plexiglass is highly recommended for perfect alignment.</li>
-                                            <li><strong>Camera Mount:</strong> Directly under the center of the plexiglass, install a small, adjustable shelf for the camera. It must point perfectly straight up.</li>
-                                            <li><strong>Projector Arm:</strong> Attach a strong arm to the back or side to hold the projector securely above the center of the grid, pointing straight down.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="md:w-1/2 text-center">
-                                        <img src="https://i.imgur.com/2j2gL9c.png" alt="Technical drawing of the interactive table" class="rounded-lg shadow-md mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/500x400/e2e8f0/64748b?text=Table+Drawing';">
-                                    </div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl icon-bullet"></span> 1. Interactive Table Setup</h3>
+                                <p class="mb-4">Construct a transparent-surface table (120x85 cm) with a support arm for mounting. Mount a camera underneath and a projector overhead on the support arm. Hide the connected Intel NUC10i7FNH Mini PC underneath the table. Add a touch screen interface (iiyama ProLite TF1634MC-B8X). Mount a second webcam on top to capture surface interaction. Connect all devices to the PC: camera, projector, touchscreen, and webcams.</p>
+                                <div class="text-center my-4">
+                                    <img src="pics/1.JPG" alt="Diagram showing the interactive table setup with camera and projector" class="rounded-lg shadow-md mx-auto mb-4">
+                                    <img src="pics/2.JPG" alt="Another diagram showing the interactive table setup from a different angle" class="rounded-lg shadow-md mx-auto">
                                 </div>
                             </div>
 
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl">2️⃣</span> Wire Up the Electronics</h3>
-                                <p class="mb-4">This part might look tricky, but it's just plugging things in! Follow the diagram from the project documentation precisely. It's important that devices are plugged into the correct ports so the software can find them automatically.</p>
-                                <div class="text-center bg-gray-900 p-4 rounded-lg">
-                                    <img src="https://i.imgur.com/y3y3k8w.png" alt="Connection diagram for all electronic components" class="rounded-lg shadow-md mx-auto max-w-full md:max-w-2xl" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e2e8f0/64748b?text=Connection+Diagram';">
-                                    <p class="text-sm text-gray-400 mt-2">The official connection diagram. Follow it carefully for a smooth setup!</p>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl icon-bullet"></span> 2. Transparent LEGO Grid Board</h3>
+                                <p class="mb-4">Inside the top, create a ledge for the 56x56cm plexiglass sheet to sit on. A CNC-milled grid on the plexiglass is highly recommended for perfect alignment. Ensure 1.75 mm depth per tile square. Use provided grid spacing and drilling specs for precision.</p>
+                                <div class="text-center my-4">
+                                    <img src="pics/3.JPG" alt="Diagram of the transparent LEGO grid board" class="rounded-lg shadow-md mx-auto">
                                 </div>
                             </div>
 
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl">3️⃣</span> Assemble the Magic Blocks</h3>
-                                <p class="mb-4">This is a great task for a group! You need to build 256 blocks. The most important part is getting the black and white pattern on the bottom correct for each type, as this is how the camera tells them apart.</p>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3 flex items-center gap-3"><span class="text-3xl icon-bullet"></span> 3. LEGO City Tiles</h3>
+                                <p class="mb-4">Build tiles for each city zone: residential, commercial, industrial, roads, parks, water. You need to build 256 blocks. The most important part is getting the black and white pattern on the bottom correct for each type, as this is how the camera tells them apart. To build each building, follow each of the instructions that you can find in the following URL: <a href="https://github.com/IMAGINARY/future-mobility-lego/tree/workshops-v1/instructions" target="_blank" class="text-blue-600 hover:underline font-semibold">LEGO Building Instructions</a></p>
                                 <div class="text-center bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                                    <img src="https://i.imgur.com/Tqg8q7E.png" alt="Diagram of the six different block types" class="mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x200/e2e8f0/64748b?text=6+Block+Types';">
+                                    <img src="pics/Übersicht beschriftet.png" alt="Diagram of the six different block types" class="mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x200/e2e8f0/64748b?text=6+Block+Types';">
                                     <p class="text-sm text-gray-500 mt-2">Refer to this pattern guide when building your blocks. Accuracy is key!</p>
                                 </div>
                             </div>
@@ -174,28 +159,63 @@
                 <!-- Software Tab -->
                 <div id="software" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">💻 Installing the Brains (Software Setup)</h2>
-                        <p class="mb-6">Let's get the software running on your Mini-PC. You'll need an internet connection and to be comfortable using the command line (Terminal on Mac/Linux, or PowerShell/CMD on Windows).</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Installing the Brains (Software Setup)</h2>
+                        <p class="mb-6">This document provides the complete procedure for setting up the Windscope software environment, based on the official project repositories and prior implementation notes.</p>
 
                         <div class="space-y-8">
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 1: Install the Prerequisites</h3>
-                                <p class="mb-4">Before we download the Windscope code, we need to install the tools it relies on.</p>
-                                <ul class="list-decimal list-inside space-y-3 mb-6">
-                                    <li><strong>Git:</strong> A tool for downloading code from GitHub. <a href="https://git-scm.com/downloads" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Git here.</a></li>
-                                    <li><strong>Node.js:</strong> The runtime environment for the main simulator server. <a href="https://nodejs.org/en/download" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Node.js here (LTS version is recommended).</a></li>
-                                    <li><strong>Python:</strong> The language used for the camera scanner. <a href="https://www.python.org/downloads/" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Python here.</a> (Make sure to check "Add Python to PATH" during installation on Windows).</li>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Software Components</h3>
+                                <p class="mb-4">The Windscope exhibit operates through several coordinated software modules:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-6">
+                                    <li><strong>Scanner component:</strong> Captures video from the camera, detects tags under tiles, and sends their positions to the server. <a href="https://github.com/IMAGINARY/tag-grid-scanner" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository</a> | License: Apache 2.0</li>
+                                    <li><strong>Server component:</strong> Maintains the city simulation state, processes updates from the scanner, and communicates with UI components. <a href="https://github.com/IMAGINARY/future-mobility" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository</a> | License: MIT</li>
+                                    <li><strong>Visual interfaces:</strong> Web-based displays for the animated city projection, goals dashboard, and performance feedback. <a href="https://github.com/IMAGINARY/future-mobility" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository (future-mobility)</a>, <a href="https://github.com/IMAGINARY/future-mobility-spy" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository (future-mobility-spy)</a> | License: MIT</li>
+                                    <li><strong>Kiosk browser:</strong> Simplified browser for displaying the UI in full screen during exhibitions. <a href="https://github.com/IMAGINARY/kiosk-browser" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository</a> | License: Apache 2.0</li>
+                                    <li><strong>Setup scripts:</strong> Optional scripts for automating environment configuration on exhibition PCs. <a href="https://github.com/IMAGINARY/future-mobility-scripts" target="_blank" class="text-blue-600 hover:underline font-semibold">Repository</a> | License: Apache 2.0</li>
                                 </ul>
                             </div>
+                            
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 2: Set Up the Scanner (Python)</h3>
-                                <p class="mb-4">This program uses the camera to identify the blocks on the grid. It's the "eyes" of your exhibit.</p>
-                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner"><p class="text-gray-400"># 1. Open your terminal.</p><p class="text-gray-400"># 2. Clone (download) the scanner repository.</p><p class="text-green-400">$ git clone https://github.com/Bachelor-thesis-windpark-simulator/scanner.git</p><br><p class="text-gray-400"># 3. Navigate into the new directory.</p><p class="text-green-400">$ cd scanner</p><br><p class="text-gray-400"># 4. Install the necessary Python libraries.</p><p class="text-green-400">$ pip install -r requirements.txt</p><br><p class="text-yellow-400"># 5. VERY IMPORTANT: Calibrate the camera!</p><p class="text-gray-400"># The program needs to correct for the fisheye lens. Run the script and hold a chessboard pattern in front of the camera at different angles.</p><p class="text-green-400">$ python calibrate.py</p></div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Prerequisites</h3>
+                                <p class="mb-4">Before proceeding, install the following on your system:</p>
+                                <ul class="list-disc list-inside space-y-2 mb-6">
+                                    <li><strong>Git:</strong> For cloning repositories. <a href="https://git-scm.com/downloads" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Git here.</a></li>
+                                    <li><strong>Python 3.8+:</strong> Required for the scanner. <a href="https://www.python.org/downloads/" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Python here.</a></li>
+                                    <li><strong>Node.js (LTS):</strong> Required for the server and UI. <a href="https://nodejs.org/en/download" target="_blank" class="text-blue-600 hover:underline font-semibold">Download Node.js here.</a></li>
+                                    <li><strong>Visual Studio Code:</strong> Recommended editor for managing the code. <a href="https://code.visualstudio.com/" target="_blank" class="text-blue-600 hover:underline font-semibold">Download VS Code here.</a></li>
+                                </ul>
+                                <p class="mb-2">Install the UI server package globally:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-4"><p class="text-green-400">$ npm install --global http-server</p></div>
+                                <p class="mb-2">Install Python dependencies for the scanner:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-6"><p class="text-green-400">$ pip install requests opencv-python</p></div>
+                                <p class="text-sm text-gray-600">Ensure any required environment variables are set according to project requirements.</p>
                             </div>
+
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 3: Set Up the Simulator (Node.js)</h3>
-                                <p class="mb-4">This is the main application server. It's the "brain" that runs the simulation and creates the visuals.</p>
-                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner"><p class="text-gray-400"># 1. Open a NEW, separate terminal window.</p><p class="text-gray-400"># 2. Clone the main simulator repository.</p><p class="text-green-400">$ git clone https://github.com/Bachelor-thesis-windpark-simulator/windpark-simulator.git</p><br><p class="text-gray-400"># 3. Navigate into the new directory.</p><p class="text-green-400">$ cd windpark-simulator</p><br><p class="text-gray-400"># 4. Install the Node.js dependencies. This might take a few minutes.</p><p class="text-green-400">$ npm install</p></div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Calibration Procedures</h3>
+                                <p class="mb-4">Calibration is performed in two separate steps:</p>
+                                <h4 class="font-bold text-lg mb-2">3.1 Initial Camera Calibration (Lens Distortion Removal)</h4>
+                                <p class="mb-4">Performed once when the camera is permanently fixed to the model’s base plate. This removes fish-eye distortion. Follow the OpenCV tutorial: <a href="https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html" target="_blank" class="text-blue-600 hover:underline font-semibold">OpenCV tutorial</a> and save the generated camera matrix and distortion coefficients.</p>
+                                <h4 class="font-bold text-lg mb-2">3.2 Grid Edge Calibration (calibrate.py)</h4>
+                                <p class="mb-4">Defines the grid boundaries within the scanner software.</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-4"><p class="text-green-400">$ python calibrate.py</p></div>
+                                <p class="text-sm text-gray-600">Click the corners in this order: top left, bottom left, top right, bottom right. Repeat if the plate or camera is moved.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. Installation and Build</h3>
+                                <h4 class="font-bold text-lg mb-2">4.1 Clone Repositories</h4>
+                                <p class="mb-2">Clone the main simulator:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-4"><p class="text-green-400">$ git clone https://github.com/Bachelor-thesis-windpark-simulator/windpark-simulator.git</p><p class="text-green-400">$ cd windpark-simulator</p></div>
+                                <p class="mb-2">Clone the scanner:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-6"><p class="text-green-400">$ git clone https://github.com/IMAGINARY/tag-grid-scanner.git</p><p class="text-green-400">$ cd tag-grid-scanner</p></div>
+                                <h4 class="font-bold text-lg mb-2">4.2 Install Dependencies</h4>
+                                <p class="mb-2">In `windpark-simulator` root:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-4"><p class="text-green-400">$ npm install</p></div>
+                                <p class="mb-2">In `windpark-simulator/server`:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-4"><p class="text-green-400">$ npm install</p></div>
+                                <p class="mb-2">In `tag-grid-scanner`:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm shadow-inner mb-6"><p class="text-green-400">$ pip install -r requirements.txt</p></div>
                             </div>
                         </div>
                     </div>
@@ -204,29 +224,61 @@
                 <!-- Run Tab -->
                 <div id="run" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🚀 Let's Go! Running the Project</h2>
-                        <p class="mb-6">You've built the hardware and installed the software. It's time to bring your Windscope to life! You'll need to have both terminal windows open from the previous step.</p>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Let's Go! Running the Project</h2>
+                        <p class="mb-6">You've built the hardware and installed the software. It's time to bring your Windscope to life!</p>
 
                         <div class="space-y-6">
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 1: Start the Scanner</h3>
-                                <p class="mb-4">In your **first** terminal (the one in the `scanner` directory), run the main Python script. This activates the camera.</p>
-                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm mb-4 shadow-inner"><p class="text-green-400">$ python main.py</p></div>
-                                <p>A window should pop up showing the live feed from your camera. You should be able to see the bottoms of the blocks you place on the grid.</p>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 2: Start the Simulator Server</h3>
-                                <p class="mb-4">In your **second** terminal (the one in the `windpark-simulator` directory), start the Node.js server. This starts the simulation.</p>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">5. Running the Software</h3>
+                                <p class="mb-4">Three processes must run at the same time:</p>
+                                <h4 class="font-bold text-lg mb-2">5.1 Start the UI (http-server)</h4>
+                                <p class="mb-2">From the `windpark-simulator` root:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm mb-4 shadow-inner"><p class="text-green-400">$ npm run build</p><p class="text-green-400">$ http-server -c-1</p></div>
+                                <p class="mb-4 text-sm text-gray-600">This serves the built UI. Note the link displayed in the terminal; it is needed for accessing the dashboard and city view.</p>
+                                
+                                <h4 class="font-bold text-lg mb-2">5.2 Start the Backend Server</h4>
+                                <p class="mb-2">From `windpark-simulator/server`:</p>
                                 <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm mb-4 shadow-inner"><p class="text-green-400">$ npm start</p></div>
-                                <p>You'll see some log messages appear, indicating the server is running and waiting for the scanner.</p>
+                                <p class="mb-4 text-sm text-gray-600">This launches the Node.js backend that processes scanner data and updates the simulation.</p>
+
+                                <h4 class="font-bold text-lg mb-2">5.3 Start the Scanner</h4>
+                                <p class="mb-2">From the `scanner` directory:</p>
+                                <div class="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm mb-4 shadow-inner"><p class="text-green-400">$ python run.py</p></div>
+                                <p class="text-sm text-gray-600">A live camera feed should appear with detected tiles outlined.</p>
                             </div>
+                            
                             <div>
-                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Step 3: Open the Views in a Browser</h3>
-                                <p class="mb-4">The simulation is now running! Open a web browser (like Chrome or Firefox) on the Mini-PC.</p>
-                                <ul class="list-decimal list-inside space-y-3">
-                                    <li><strong>Projector View:</strong> Navigate to <a href="http://localhost:8000/city" target="_blank" class="text-blue-600 hover:underline font-semibold">http://localhost:8000/city</a>. Drag this browser window onto the projector's display and make it **full screen** (usually by pressing F11).</li>
-                                    <li><strong>Dashboard View:</strong> Open a new tab and navigate to <a href="http://localhost:8000/dashboard" target="_blank" class="text-blue-600 hover:underline font-semibold">http://localhost:8000/dashboard</a>. Drag this window onto your dashboard monitor.</li>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">6. Accessing the Interfaces</h3>
+                                <p class="mb-4">The simulation is now running! Open a web browser (like Firefox) on the Mini-PC.</p>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li><strong>Dashboard:</strong> Open the copied `http-server` link in Firefox and append `/dashboard` (e.g., `http://<ip>:8081/dashboard`). Press F11 for full screen.</li>
+                                    <li><strong>City View:</strong> Open another Firefox window with the same base link but append `/city`. Press F11 and move the window to the projector display.</li>
                                 </ul>
+                                <p class="text-sm text-gray-600">If the city projection does not align with the physical grid, adjust `max-width` and `max-height` in the browser inspector until it fits.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">7. Notes</h3>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li>The windspeed and direction knobs only function if the City View window is active.</li>
+                                    <li>Return knobs to starting positions before running simulations.</li>
+                                    <li>Repeat calibration steps if tile detection is inaccurate.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-8">
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-3">6. Connection & Power Setup</h3>
+                                <p class="mb-4">Use the exact port layout as in the connection diagram. Connect PC, touchscreen, and LEDs via the junction box for power switching. Keep projectors permanently connected to mains for proper cooling.</p>
+                                <h4 class="font-bold text-lg mb-2">Sample connections:</h4>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>NUC HDMI → Wall projector</li>
+                                    <li>USB-C → Dual HDMI → Top and table projectors</li>
+                                    <li>USB-A → Cameras</li>
+                                    <li>USB-A/USB-C → Touchscreen data; HDMI → Touchscreen video</li>
+                                </ul>
+                                <div class="text-center my-4">
+                                    <img src="pics/4.JPG" alt="Diagram showing the connection and power setup" class="rounded-lg shadow-md mx-auto">
+                                </div>
                             </div>
                         </div>
 
@@ -240,7 +292,7 @@
                 <!-- Play Tab -->
                 <div id="play" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🎮 How to Play & Learn the Science</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Play & Learn the Science</h2>
                         <p class="mb-8">Experiment by placing blocks and turning the wind knobs. Watch how the dashboard changes in real-time. Here's the science behind what you're seeing:</p>
                         
                         <div class="space-y-8">
@@ -248,9 +300,9 @@
                                 <h3 class="text-2xl font-semibold text-gray-800 mb-3">The Power Curve: Wind Speed is Key!</h3>
                                 <p class="mb-4">Not all wind is the same. Wind turbines have a "sweet spot" for generating power. Use your wind speed knob and watch the <strong>Power (Leistung)</strong> on the dashboard.</p>
                                 <ul class="list-none space-y-2 text-sm">
-                                    <li class="flex items-center gap-3"><span class="font-bold text-blue-600">Too Slow:</span> Below the "cut-in speed" (Anlaufgeschwindigkeit, ~3 m/s), the blades won't even turn. No power!</li>
-                                    <li class="flex items-center gap-3"><span class="font-bold text-green-600">Just Right:</span> As speed increases, power skyrockets! It increases with the CUBE of the velocity.</li>
-                                    <li class="flex items-center gap-3"><span class="font-bold text-yellow-600">Rated Speed:</span> At a certain point (~14 m/s), the turbine reaches its maximum "rated power" (Nennleistung). Even if the wind gets faster, it won't produce more power, to protect itself.</li>
+                                    <li class="flex items-center gap-3"><span class="font-bold text-blue-600 icon-bullet"></span><div><strong>Too Slow:</strong> Below the "cut-in speed" (Anlaufgeschwindigkeit, ~3 m/s), the blades won't even turn. No power!</div></li>
+                                    <li class="flex items-center gap-3"><span class="font-bold text-green-600 icon-bullet"></span><div><strong>Just Right:</strong> As speed increases, power skyrockets! It increases with the CUBE of the velocity.</div></li>
+                                    <li class="flex items-center gap-3"><span class="font-bold text-yellow-600 icon-bullet"></span><div><strong>Rated Speed:</strong> At a certain point (~14 m/s), the turbine reaches its maximum "rated power" (Nennleistung). Even if the wind gets faster, it won't produce more power, to protect itself.</div></li>
                                 </ul>
                             </div>
 
@@ -261,12 +313,12 @@
                                     <div class="md:w-2/3">
                                         <ul class="list-disc list-inside space-y-2">
                                             <li><strong>Less Power:</strong> The downstream turbine gets less "fuel" (wind) and produces much less electricity.</li>
-                                            <li><strong>Shorter Lifespan:</strong> The turbulent, choppy air causes extra wear and tear (Materialermüdung), reducing the turbine's lifespan. Watch the <strong>Lifespan (Lebensdauer)</strong> smiley on your dashboard!</li>
+                                            <li><strong>Shorter Lifespan:</strong> The turbulent, choppy air causes extra wear and tear (Materialermüdung), reducing the turbine's lifespan. Watch the <strong>Lifespan (Lebensdauer)</strong> indicator on your dashboard!</li>
                                         </ul>
                                         <p class="mt-4 font-semibold">Try it! Place two turbines in a row and turn the wind direction knob so one is directly behind the other. See what happens to the Power and Lifespan values.</p>
                                     </div>
                                     <div class="md:w-1/3 text-center">
-                                        <img src="https://i.imgur.com/gKz7i9d.png" alt="Diagram showing the wake effect behind a wind turbine" class="rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Wake+Effect';">
+                                        <img src="pics/wake.jpg" alt="Diagram showing the wake effect behind a wind turbine" class="rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e2e8f0/64748b?text=Wake+Effect';">
                                         <p class="text-sm text-gray-500 mt-2">The wake of slower, turbulent air behind a turbine.</p>
                                     </div>
                                 </div>
@@ -274,7 +326,7 @@
 
                             <div>
                                 <h3 class="text-2xl font-semibold text-gray-800 mb-3">Distance Rules (Abstandsregelungen)</h3>
-                                <p class="mb-4">In the real world, there are strict rules about where you can build turbines to protect people and nature. The simulator includes these! If you place a turbine too close to something, a red <strong>❗</strong> will appear.</p>
+                                <p class="mb-4">In the real world, there are strict rules about where you can build turbines to protect people and nature. The simulator includes these! If you place a turbine too close to something, a red <strong>indicator</strong> will appear.</p>
                                 <ul class="list-disc list-inside space-y-2">
                                     <li><strong>To Houses:</strong> Turbines must be a safe distance from settlements to protect residents from noise and "shadow flicker."</li>
                                     <li><strong>To Each Other:</strong> To avoid the wake effect, turbines need to be spaced out—typically 5-7 times their rotor diameter apart in the main wind direction!</li>
@@ -288,7 +340,7 @@
                 <!-- Science Lab Tab -->
                 <div id="science" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🔬 The Science Lab: A Technical Deep Dive</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">The Science Lab: A Technical Deep Dive</h2>
                         <p class="mb-8 text-lg">For the curious minds who want to know *exactly* how it works. Let's look under the hood at the science and technology powering Windscope.</p>
                         
                         <div class="space-y-10">
@@ -323,11 +375,11 @@
                                 <h3 class="text-2xl font-semibold text-gray-800 mb-3">How the "Eyes" Work: Computer Vision Pipeline</h3>
                                 <p class="mb-4">How does the computer know which block is where? It's a three-step computer vision process:</p>
                                 <div class="flex flex-col md:flex-row justify-around items-center text-center gap-4">
-                                    <div class="p-4"><div class="text-4xl">📷</div><p class="font-bold mt-2">1. Capture Image</p><p class="text-sm">The camera takes a picture of the grid.</p></div>
+                                    <div class="p-4"><div class="text-4xl icon-bullet"></div><p class="font-bold mt-2">1. Capture Image</p><p class="text-sm">The camera takes a picture of the grid.</p></div>
                                     <div class="text-2xl text-gray-400">&rarr;</div>
-                                    <div class="p-4"><div class="text-4xl">🔧</div><p class="font-bold mt-2">2. Correct Distortion</p><p class="text-sm">The software flattens the "fisheye" view from the wide-angle lens.</p></div>
+                                    <div class="p-4"><div class="text-4xl icon-bullet"></div><p class="font-bold mt-2">2. Correct Distortion</p><p class="text-sm">The software flattens the "fisheye" view from the wide-angle lens.</p></div>
                                     <div class="text-2xl text-gray-400">&rarr;</div>
-                                    <div class="p-4"><div class="text-4xl">✅</div><p class="font-bold mt-2">3. Match Patterns</p><p class="text-sm">It compares the pattern on each block to its library to identify the block type.</p></div>
+                                    <div class="p-4"><div class="text-4xl icon-bullet"></div><p class="font-bold mt-2">3. Match Patterns</p><p class="text-sm">It compares the pattern on each block to its library to identify the block type.</p></div>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +389,7 @@
                 <!-- Teacher's Hub Tab -->
                 <div id="teachers" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">👩‍🏫 Teacher's Hub: Using Windscope in the Classroom</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Teacher's Hub: Using Windscope in the Classroom</h2>
                         <p class="mb-8 text-lg">Windscope is more than just a model; it's a dynamic sandbox for exploring complex topics in a tangible way. Here’s how you can leverage it for your classroom.</p>
                         
                         <div class="space-y-8">
@@ -363,13 +415,13 @@
                             </div>
 
                             <div>
-                                <h3 class="text-2xl font-semibold text-yellow-800 mb-3">Guiding Questions to Spark Discussion</h3>
+                                <h3 class="2xl font-semibold text-yellow-800 mb-3">Guiding Questions to Spark Discussion</h3>
                                 <p class="mb-4">Use these questions to encourage critical thinking while students are using the exhibit:</p>
                                 <ul class="list-disc list-inside space-y-2 bg-gray-50 p-4 rounded-lg border">
                                     <li>"What happens to the total power when you cluster all the turbines close together vs. spreading them out? Why do you think that is?"</li>
                                     <li>"If the wind is coming from the north, is it better to arrange your turbines in a horizontal line or a vertical line? Why?"</li>
                                     <li>"Find the wind speed that gives you the most power. What happens if you go much faster than that? Is more wind always better?"</li>
-                                    <li>"Look at the 'Lifespan' smiley. What actions make it go down? How can you design a park that is both powerful and long-lasting?"</li>
+                                    <li>"Look at the 'Lifespan' indicator. What actions make it go down? How can you design a park that is both powerful and long-lasting?"</li>
                                     <li>"Why do you think there are rules about how close turbines can be to houses? What problems might they cause in real life?"</li>
                                 </ul>
                             </div>
@@ -380,13 +432,13 @@
                 <!-- Lesson Plan Tab -->
                 <div id="lessons" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🗓️ 5-Day Windscope Classroom Challenge</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">5-Day Windscope Classroom Challenge</h2>
                         <p class="mb-6 text-lg">Here is a sample week-long plan to structure learning around the Windscope project. This can be adapted for different age groups and timeframes.</p>
                         
                         <div class="space-y-6">
                             <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 1: The Grand Tour - Introduction & Free Play</h4><p class="text-sm mt-2"><strong>Objective:</strong> Familiarize students with the exhibit and spark initial curiosity.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Class discussion: "What do we already know about wind energy?"</li><li>Introduce the Windscope exhibit. Explain the different block types.</li><li><strong>Free Play:</strong> Allow students in small groups to freely explore the exhibit for 15-20 minutes.</li><li><strong>Wrap-up:</strong> Ask groups to share one interesting thing they discovered.</li></ul></div>
                             <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 2: The Science Lab - Power & Wakes</h4><p class="text-sm mt-2"><strong>Objective:</strong> Understand the core physics concepts of the simulation.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Guided exploration of the "How to Play" and "Science Lab" tabs.</li><li><strong>Challenge 1 (Power Curve):</strong> "Your goal is to find the exact wind speed that generates the most power. Record your findings."</li><li><strong>Challenge 2 (Wake Effect):</strong> "Place two turbines in a line. Measure the total power. Now place them side-by-side. Which is better? Why?"</li></ul></div>
-                            <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 3: The Planner's Desk - Rules & Goals</h4><p class="text-sm mt-2"><strong>Objective:</strong> Introduce the social and regulatory constraints of wind park planning.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Introduce the "Distance Rules" and the "Goals" on the dashboard. Discuss why these rules exist in the real world.</li><li><strong>Challenge: The Perfect Park.</strong> "Your team's mission is to design a wind park that satisfies all the citizen's goals and makes all the status smileys turn green."</li></ul></div>
+                            <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 3: The Planner's Desk - Rules & Goals</h4><p class="text-sm mt-2"><strong>Objective:</strong> Introduce the social and regulatory constraints of wind park planning.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Introduce the "Distance Rules" and the "Goals" on the dashboard. Discuss why these rules exist in the real world.</li><li><strong>Challenge: The Perfect Park.</strong> "Your team's mission is to design a wind park that satisfies all the citizen's goals and makes all the status indicators turn green."</li></ul></div>
                             <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 4: The Real World - Local Energy</h4><p class="text-sm mt-2"><strong>Objective:</strong> Connect the simulation to the students' own environment.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Research a real wind park in Germany. Where is it? How many turbines?</li><li><strong>Challenge: Design for Our Town.</strong> "Using a map of our local area, find the best place to build a new wind park. Use Windscope to model your proposal."</li></ul></div>
                             <div class="p-4 rounded-lg border bg-gray-50"><h4 class="font-bold text-lg text-blue-700">Day 5: The Energy Summit - Presentations</h4><p class="text-sm mt-2"><strong>Objective:</strong> Synthesize learning and communicate findings.</p><ul class="list-disc list-inside text-sm mt-2 space-y-1"><li><strong>Activity:</strong> Each team presents their "Perfect Park" or "Design for Our Town" proposal.</li><li>They must explain their design choices using concepts like wake effect, power curve, and distance rules.</li><li><strong>Final Discussion:</strong> What are the biggest challenges in switching to renewable energy?</li></ul></div>
                         </div>
@@ -396,12 +448,12 @@
                 <!-- Community Tab -->
                 <div id="community" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🌍 Community Showcase</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Community Showcase</h2>
                         <p class="mb-8 text-lg">See what other schools, clubs, and individuals have built with Windscope! Get inspired and share your own creations.</p>
                         
                         <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-r-lg mb-8" role="alert">
                             <p class="font-bold">Wind Park of the Month: The Green Valley Project</p>
-                            <p>This month we're featuring a beautiful and efficient design from a school in Bavaria. They managed to power a large settlement while keeping all their smileys green!</p>
+                            <p>This month we're featuring a beautiful and efficient design from a school in Bavaria. They managed to power a large settlement while keeping all their indicators green!</p>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -419,7 +471,7 @@
                 <!-- FAQ Tab -->
                 <div id="faq" class="tab-content">
                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">🤔 Troubleshooting & FAQ</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Troubleshooting & FAQ</h2>
                         <p class="mb-8 text-lg">Running into a problem? Don't worry! Here are some solutions to common issues.</p>
                         
                         <div class="space-y-4">
